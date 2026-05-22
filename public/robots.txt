@@ -1,0 +1,42 @@
+# Standard search engines and AI citation crawlers — allowed
+User-agent: *
+Allow: /
+
+# AI training crawlers — decision is yours; default below allows them
+# (uncomment Disallow lines to block training without affecting citation)
+User-agent: GPTBot
+Allow: /
+# Disallow: /
+
+User-agent: ClaudeBot
+Allow: /
+# Disallow: /
+
+User-agent: Google-Extended
+Allow: /
+# Disallow: /
+
+User-agent: CCBot
+Allow: /
+# Disallow: /
+
+# AI citation/search crawlers — always allow, this is how you get cited
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://avecoda.ai/sitemap-index.xml
