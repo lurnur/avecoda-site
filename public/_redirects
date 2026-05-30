@@ -1,0 +1,13 @@
+# Cloudflare Pages reads this from the build output (dist/_redirects).
+# One rule per line: <source> <destination> <status>
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# NOTE: www -> apex canonicalization is NOT done here. _redirects cannot match
+# on hostname when both www and apex point at the same Pages project. Add a
+# dashboard Redirect Rule instead (Rules -> Redirect Rules): redirect
+# www.avecoda.ai/* -> https://avecoda.ai/$1 with 301. See the message below.
+
+# 'use-cases' was removed in v1 and replaced by 'resources'. Catch any stale
+# inbound links / index entries so they don't 404.
+/use-cases    /resources    301
+/use-cases/*  /resources     301

@@ -49,12 +49,14 @@ const jsonLd = [
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Rubik (display font, borrowed from Grist's aesthetic) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Rubik (display font) — self-hosted; @font-face lives in global.css.
+         Preload the latin variable file so headings render without a flash. -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="preload"
+      href="/fonts/rubik-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
 
     <title>{title}</title>
