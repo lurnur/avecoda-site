@@ -6,12 +6,71 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Contact — Neolect"
   description="Get in touch with the Avecoda team about Neolect."
 >
-  <section class="prose">
-    <h1>Get in touch</h1>
-    <p>
-      Email us at
-      <a href="mailto:prasanth@neupage.com">prasanth@neupage.com</a> and we'll get back
-      to you.
-    </p>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Contact</span>
+      <h1>
+        Let's <span class="hl">talk pipeline</span>.
+      </h1>
+      <p class="lead">
+        Tell us how your team works today — your CRM, your motion, where
+        value is leaking. We'll come back with what Neolect would change.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card-grid cols-2" style="margin-top: 0;">
+      <article class="card accent">
+        <div class="card-eyebrow">Direct</div>
+        <h3>Email</h3>
+        <p>
+          The fastest way to reach us. We read everything and reply within a
+          business day.
+        </p>
+        <p style="margin-top: var(--space-3);">
+          <a class="btn btn-primary" href="mailto:prasanth@neupage.com">
+            prasanth@neupage.com
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </p>
+      </article>
+
+      <article class="card accent">
+        <div class="card-eyebrow">Discovery call</div>
+        <h3>Request a walkthrough</h3>
+        <p>
+          Forty-five minutes against the shape of your motion. You leave with
+          a written read on where Neolect would matter and where it wouldn't —
+          whether or not we end up working together.
+        </p>
+        <p style="margin-top: var(--space-3);">
+          <a class="btn btn-ghost" href="mailto:prasanth@neupage.com?subject=Neolect%20walkthrough">
+            Request a slot
+          </a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout featured">
+      <span class="eyebrow teal">What happens next</span>
+      <h2 style="margin-bottom: var(--space-3);">Three steps, no theatre.</h2>
+      <ol class="prose" style="padding-left: 1.25rem; margin: 0;">
+        <li>
+          <strong>You write to us</strong> with the rough shape of your team,
+          CRM, and what's most broken about the current setup.
+        </li>
+        <li>
+          <strong>We reply with a brief</strong> — what we'd look at on the
+          call, who from our side should be on it, and a couple of times.
+        </li>
+        <li>
+          <strong>We meet for 45 minutes</strong>. You leave with a written
+          read on where Neolect would help most. No pressure to continue.
+        </li>
+      </ol>
+    </div>
   </section>
 </BaseLayout>

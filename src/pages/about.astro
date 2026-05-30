@@ -1,13 +1,174 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const disciplines = [
+  {
+    label: "Discipline 01",
+    title: "Agentic AI",
+    body: "Deep experience building systems where agents do real judgment work — recognizing patterns, drafting in a person's voice, recommending the next move — with the discipline to keep them reasoning over clean, assembled evidence rather than raw data. We know where agents belong, where deterministic logic belongs, and how to keep the boundary between them safe.",
+  },
+  {
+    label: "Discipline 02",
+    title: "Integrations",
+    body: "The unglamorous work of connecting to every system where a deal actually lives — email, calendar, meetings, calls, the CRM and the wider revenue stack — reliably and at scale. Capture at the source is the foundation Neolect stands on, and getting it right across messy, real-world systems is a craft we've spent years refining.",
+  },
+  {
+    label: "Discipline 03",
+    title: "Data processing",
+    body: "Turning a flood of raw activity into structured, reconciled, trustworthy evidence — deduplicated, associated to the right deal, and shaped into signals that mean something. This is the layer that makes everything above it credible, and it's where a great deal of the hard engineering actually lives.",
+  },
+  {
+    label: "Discipline 04",
+    title: "Revenue operations",
+    body: "We understand the work because we've lived it — the forecast nobody trusts, the report that takes three days, the rep who spends half the week feeding the system instead of selling. Neolect is shaped by people who know what a champion, a slip and a clean handoff actually look like in practice.",
+  },
+];
+
+const principles = [
+  {
+    label: "Evidence first",
+    title: "Solve the data problem before the AI problem",
+    body: "We don't point intelligence at dirty data and hope. We capture and reconcile the evidence first, then let judgment run over something clean. The order is the whole difference.",
+  },
+  {
+    label: "Trust by design",
+    title: "Safety is a pillar, not a postscript",
+    body: "Human-in-the-loop, permissions, audit trails and reversible actions are designed in from the start — because a system that touches the revenue record has to hold up to scrutiny.",
+  },
+  {
+    label: "In the field",
+    title: "Embedded, accountable, ongoing",
+    body: "We deliver through forward-deployed engineers who sit with your team, build around your motion, and own the outcome — then stay engaged as that motion changes.",
+  },
+];
 ---
 
 <BaseLayout
-  title="About — Neolect"
-  description="Avecoda builds Neolect, the intelligent workspace for the revenue org."
+  title="About — Avecoda | The company behind Neolect"
+  description="Avecoda is the company behind Neolect. Built on a decade at the intersection of agentic AI, integrations, data processing and revenue operations."
 >
-  <section class="prose">
-    <h1>About Avecoda</h1>
-    <p>Placeholder. The company story and positioning land in the content spec.</p>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">About · Avecoda</span>
+      <h1>
+        Neolect is built by <span class="hl">Avecoda</span> — and built on a
+        decade of getting the hard parts right.
+      </h1>
+      <p class="lead">
+        Avecoda is the company behind Neolect. We've spent years working at the
+        intersection of four disciplines that most teams treat separately:
+        agentic AI, systems integration, data processing at scale, and revenue
+        operations. Neolect exists because that combination is exactly what the
+        problem demands.
+      </p>
+      <div class="cta-group">
+        <a href="#disciplines" class="btn btn-primary">
+          What we know <span class="arr" aria-hidden="true">↓</span>
+        </a>
+        <a href="/contact" class="btn btn-ghost">Work with us</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow teal">Our thesis</span>
+      <h2>The CRM gap isn't an AI problem. It's a four-discipline problem.</h2>
+      <p>
+        A year of AI-on-top-of-CRM launches taught the market a hard lesson:
+        intelligence is only as good as the data beneath it, and most of that
+        data is sparse, biased and dependent on what a rep remembered to type.
+        Bolting a model onto a dirty record doesn't fix the record.
+      </p>
+      <p>
+        Closing the gap properly requires capturing evidence at the source,
+        reconciling it into something clean, reasoning over it safely, and
+        shaping the whole thing to how a specific revenue team actually sells.
+        No single discipline gets you there. Avecoda was built around all four.
+      </p>
+    </div>
+  </section>
+
+  <section id="disciplines">
+    <div class="section-head prose">
+      <span class="eyebrow">What we bring</span>
+      <h2>Four disciplines, deliberately combined.</h2>
+    </div>
+    <div class="card-grid cols-2">
+      {disciplines.map((d, i) => (
+        <article class="card accent">
+          <div class="card-eyebrow">{d.label}</div>
+          <h3>{d.title}</h3>
+          <p>{d.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow warm">How we build</span>
+      <h2>Principles that show up in the product.</h2>
+    </div>
+    <div class="card-grid cols-3">
+      {principles.map((p, i) => (
+        <article class="card">
+          <div class="card-eyebrow">{p.label}</div>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+        </article>
+      ))}
+    </div>
+    <div class="prose" style="margin-top: var(--space-4);">
+      <p>
+        <a href="/resources">How the forward-deployed model works <span aria-hidden="true">→</span></a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout featured" style="text-align:center;">
+      <p style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; color: var(--color-fg); margin: 0;">
+        We didn't build another AI feature for the CRM. We built the
+        <span class="hl"><em>intelligence layer</em></span> the CRM was always
+        missing — and the team to make it real inside your organization.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow teal">Who we work with</span>
+      <h2>Revenue teams that already own a CRM — and want it to finally deliver.</h2>
+      <p>
+        Neolect is for organizations that have invested in a system of record
+        and feel the gap between what they're paying for and what they're
+        getting. We work alongside whatever CRM you already run — there's no
+        migration and no rip-and-replace, because Neolect is a capability you
+        add, not a project you take on.
+      </p>
+      <p>
+        If you're carrying a real plan, feeling the forecast you can't trust
+        and the selling time you can't recover, that's exactly the gap we built
+        Avecoda to close.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-banner">
+      <span class="eyebrow">Work with Avecoda</span>
+      <h2>Let's see what your CRM should have been delivering all along.</h2>
+      <p class="lead">
+        Talk to the team behind Neolect about your motion, your stack, and
+        where the value would land first.
+      </p>
+      <div class="cta-group">
+        <a href="/contact" class="btn btn-primary">
+          Request a walkthrough <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a href="/" class="btn btn-ghost">Back to overview</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>

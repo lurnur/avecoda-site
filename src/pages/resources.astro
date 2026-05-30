@@ -1,0 +1,207 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const fdeFacets = [
+  {
+    label: "Not a consultant",
+    title: "Builders, not advisors",
+    body: "An FDE ships working systems, not recommendations. The deliverable is something that runs in your environment — not a strategy document for someone else to implement.",
+  },
+  {
+    label: "Embedded",
+    title: "Inside your team",
+    body: "FDEs work alongside your people, in your tools, against your data and constraints — close enough to see the things no discovery call ever surfaces.",
+  },
+  {
+    label: "Accountable",
+    title: "Measured on outcomes",
+    body: "Success is adoption and measurable results, not delivery milestones. The FDE stays engaged after launch because the motion keeps changing.",
+  },
+];
+
+const movements = [
+  {
+    k: "Movement 01",
+    title: "Discover",
+    body: "In the first weeks, the FDE embeds with RevOps and revenue leadership to learn how you actually sell — not how the playbook says you do. What counts as a champion in your segment. What a healthy buying committee looks like. The shape of silence that precedes a slip on your deals. The questions leadership can never get answered fast enough. This is the discovery a sales call can't reach.",
+  },
+  {
+    k: "Movement 02",
+    title: "Build",
+    body: "The FDE composes the workspace views for each role, connects the systems where your deals actually happen, and tunes what the intelligence layer pays attention to — the signals that matter for your motion and the autonomy boundary that fits each kind of deal. The system is built around your reality, in your environment, rather than configured from a generic template.",
+  },
+  {
+    k: "Movement 03",
+    title: "Deliver",
+    body: "Outcomes are validated against your motion in the first 90 days — selling time recovered, deals caught early, forecast tightened. And because a sales motion never stops changing, the FDE stays engaged: re-tuning signals, adjusting views, widening agent autonomy as trust accumulates. Delivery isn't a hand-off; it's an ongoing partnership.",
+  },
+];
+---
+
+<BaseLayout
+  title="Resources — Neolect | The forward-deployed engineer model"
+  description="Neolect is delivered through a forward-deployed engineering model — engineers who embed inside your revenue operation, build the system around your motion, and stay accountable for the outcome."
+>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Resources · The deployment model</span>
+      <h1>
+        We don't ship software and leave. We send
+        <span class="hl">engineers who sit with your team</span>.
+      </h1>
+      <p class="lead">
+        Neolect is delivered through a forward-deployed engineering model.
+        Rather than handing you a tool and a login, we embed engineers inside
+        your revenue operation to learn how you actually sell, build the
+        system around that motion, and stay accountable for the outcome.
+        Here's what that means.
+      </p>
+      <div class="cta-group">
+        <a href="#what" class="btn btn-primary">
+          What is an FDE? <span class="arr" aria-hidden="true">↓</span>
+        </a>
+        <a href="#how" class="btn btn-ghost">How we embed</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="section-head prose">
+      <span class="eyebrow">The role</span>
+      <h2>What is a forward-deployed engineer?</h2>
+      <p>
+        A forward-deployed engineer — an FDE — is a senior technical builder
+        who embeds directly with a customer to implement, configure and
+        operationalize a complex system inside that customer's real
+        environment, on their real data, against their real constraints.
+      </p>
+    </div>
+    <div class="prose">
+      <p>
+        The model was pioneered by Palantir in the early 2010s, working with
+        customers whose problems couldn't be understood through a normal
+        discovery call. The answer was to put engineers on-site, embedded with
+        the customer's team, building solutions in the conditions where the
+        work actually happened. The approach has since become standard across
+        the AI industry — used at companies like OpenAI, Anthropic and Scale AI
+        — because deploying intelligent software in production is nothing like
+        deploying it in a sandbox.
+      </p>
+      <p>
+        What distinguishes an FDE from the roles around it is accountability.
+        An FDE is not a consultant who delivers a slide deck, not a support
+        engineer who answers tickets, and not a pre-sales engineer who
+        disappears once the contract is signed. An FDE writes production-grade
+        work, owns delivery end to end, and is measured on adoption and
+        outcomes — not on hours billed or features handed over.
+      </p>
+    </div>
+
+    <div class="card-grid cols-3" style="margin-top: var(--space-5);">
+      {fdeFacets.map((f, i) => (
+        <article class="card">
+          <div class="card-eyebrow">{f.label}</div>
+          <h3>{f.title}</h3>
+          <p>{f.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="callout featured">
+      <span class="eyebrow teal">Why this model</span>
+      <h2 style="margin-bottom: var(--space-3);">
+        Configurable is just a blank canvas until someone shapes it.
+      </h2>
+      <p>
+        Much of the frustration with the incumbent CRM isn't the platform —
+        it's that its usability depends on heavy local customization that most
+        teams never get right. A system that can do anything is good at nothing
+        until someone configures it for the way you work.
+      </p>
+      <p style="margin-top: var(--space-3);">
+        Neolect is built to be shaped — stage definitions, what counts as a
+        healthy committee, what shape of silence precedes a slip, where the
+        autonomy boundary sits. The forward-deployed model is how that shaping
+        actually happens: not a configuration manual you're left to figure out,
+        but engineers who do it with you and keep doing it as you change.
+      </p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="section-head prose">
+      <span class="eyebrow warm">How we work</span>
+      <h2>Embedded in your RevOps team.</h2>
+      <p>
+        Neolect's forward-deployed engineers join your revenue operation as
+        working members of it — not vendors on a call cadence. They sit with
+        RevOps and revenue leadership, learn the motion from the inside, and
+        build the system around what they find. The work runs in three
+        movements that overlap and repeat as your motion evolves.
+      </p>
+    </div>
+
+    <div class="card-grid cols-3" id="deliver">
+      {movements.map((m, i) => (
+        <article class="card accent">
+          <div class="card-eyebrow">{m.k}</div>
+          <h3>{m.title}</h3>
+          <p>{m.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow teal">Two-way value</span>
+      <h2>The embed makes Neolect better, too.</h2>
+    </div>
+    <div class="card-grid cols-2">
+      <article class="card">
+        <p>
+          Because our engineers work across many revenue organizations, the
+          edge cases, integration problems and missing capabilities they
+          encounter in the field flow back into the core product. What's
+          learned shaping one team's motion becomes a stronger system for the
+          next. The customer-specific work and the product improve each other.
+        </p>
+      </article>
+      <article class="card">
+        <p>
+          For you, that means the system keeps getting better underneath you —
+          not just from your own FDE's tuning, but from everything the broader
+          team is learning in parallel. You're not maintaining a bespoke
+          deployment frozen at launch. You're on a platform that compounds.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="quote-card" style="max-width: 50ch; margin: 0 auto; text-align: center;">
+      FDEs ship working systems, not slide decks — and they're measured on
+      whether the team actually adopts them.
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-banner">
+      <span class="eyebrow">Start the discovery</span>
+      <h2>The first weeks are spent learning how you sell.</h2>
+      <p class="lead">
+        Talk to us about embedding a forward-deployed engineer with your
+        revenue team — and what the first 90 days would look like against your
+        motion.
+      </p>
+      <div class="cta-group">
+        <a href="/contact" class="btn btn-primary">
+          Request a walkthrough <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a href="/about" class="btn btn-ghost">About the team</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

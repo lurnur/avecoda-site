@@ -1,13 +1,238 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pillars = [
+  {
+    id: "workspace",
+    sub: "Pillar one · The workspace",
+    title: "One model of every deal, a clean surface for every role.",
+    body: [
+      "Daily prioritization, weekly coaching, monthly forecasting, continuous hygiene and handoff at close are different jobs running on different rhythms. Build them as separate tools and the truth fragments. Neolect builds them as different views over one shared model of the deal, so every role sees the same reality — structured for the work in front of them.",
+      "The surface is opinionated and quiet. Each person sees what their job needs and nothing it doesn't. The complexity that makes that possible stays out of sight.",
+    ],
+    value: [
+      { head: "One source of truth.", body: "The rep, the manager, the CRO, RevOps and CS all work from the same underlying deal — no reconciling five tools that disagree." },
+      { head: "A surface per cadence.", body: "A daily list for the rep, a review canvas for the manager, a forecast for the CRO, a query surface for RevOps — each tuned to how often that person looks." },
+      { head: "Shaped to your motion.", body: "What counts as a healthy deal, how stages are defined, what a strong buying committee looks like — all configured to your organization, invisible to the user." },
+    ],
+  },
+  {
+    id: "integrations",
+    sub: "Pillar two · Integrations",
+    title: "Capture at the source, so no one is the data-entry layer.",
+    body: [
+      "Neolect connects to the systems where the deal actually happens — email, calendar, meeting recordings, calls, the CRM and the rest of the revenue stack. Capture stops being something a rep does at the end of the day from memory, and becomes something the system does continuously, at the source. The CRM keeps getting written back to, so the record stays consistent — it's simply no longer where the work depends on someone remembering to type.",
+      "This is the foundation everything else stands on. Without complete capture at the source, every layer above it inherits the gaps and biases of whatever a rep happened to log.",
+    ],
+    value: [
+      { head: "Hours back to selling.", body: "Removing reps from the data-entry path returns real selling time and ends the \"second job\" of feeding the CRM." },
+      { head: "Nothing falls through.", body: "The interactions that normally never get logged — the quiet ones that carry the most signal — are captured automatically." },
+      { head: "Hygiene that maintains itself.", body: "Because the record is written from what actually happened, the data stays clean without a cleanup project." },
+    ],
+  },
+  {
+    id: "workflows",
+    sub: "Pillar three · Workflows & agents",
+    title: "Mechanical work and judgment work, split on purpose.",
+    body: [
+      "Not every task wants the same kind of automation. Predictable, mechanical work — associating activity with the right deal, tidying records, computing a defined signal, writing a structured update back to the CRM — runs as deterministic workflows that are testable and reliable. Work that takes judgment — recognizing that a deal has the shape of past slips, drafting a message in the rep's voice, deciding which contact to surface this morning — runs through agents.",
+      "The sequence is the point: the mechanical layer assembles and cleans the evidence first, and agents only ever reason over that prepared evidence — never over raw, unreconciled fields. This is the direct answer to a year of AI-on-top-of-dirty-data disappointments.",
+    ],
+    value: [
+      { head: "AI you can actually trust.", body: "Because judgment runs over clean, assembled evidence, the output reflects what's real — not whatever was half-entered." },
+      { head: "The next move, already drafted.", body: "Each flagged deal arrives with a recommended action and a message written in the rep's voice, ready to review and send." },
+      { head: "Risk surfaced early.", body: "The system reads the patterns that precede a slip and raises the at-risk deal while there's still time to intervene." },
+    ],
+  },
+  {
+    id: "safety",
+    sub: "Pillar four · Safety & trust",
+    title: "Visible, reversible, bounded — by design.",
+    body: [
+      "Safety is a pillar here, not a disclaimer at the bottom of a page. Consequential actions are human-in-the-loop by default: the system drafts and proposes, a person approves before anything is sent or committed, and that autonomy boundary can be widened as trust accumulates. Permissions are enforced and audited. Every action — mechanical or agentic — leaves a trail showing who did what, when, on the basis of what evidence.",
+      "The promise isn't \"trust the agents.\" It's that every step is traceable to its evidence and reversible if it shouldn't have happened.",
+    ],
+    value: [
+      { head: "Provenance on everything.", body: "Every recommendation is one click from the evidence behind it. Every action is one click from being undone." },
+      { head: "You set the boundary.", body: "The level of autonomy is tunable per workflow — tighter on a new-business pursuit, looser where the team has built confidence." },
+      { head: "Built for scrutiny.", body: "Permissions, audit trails and approval gates mean the system holds up to the questions security and leadership will ask." },
+    ],
+  },
+];
+
+const differentiators = [
+  {
+    label: "No rip-and-replace",
+    title: "The CRM isn't replaced",
+    body: "It's given the intelligence layer it always lacked. The system of record stays where it is; Neolect runs alongside it and writes back to keep it consistent. You add a capability — you don't undertake a migration.",
+  },
+  {
+    label: "Evidence first",
+    title: "Mechanical and agentic, split by design",
+    body: "Extraction runs as workflows; pattern recognition and language run as agents — but only over evidence already assembled and cleaned. The architecture is the direct answer to AI pointed at dirty data.",
+  },
+  {
+    label: "Trust as a pillar",
+    title: "Safety isn't a disclaimer",
+    body: "Human-in-the-loop, permissions, audit trails, bounded autonomy. Every recommendation traces to its evidence; every action is reversible. Trust is earned step by step, with the controls to expand or restrict it.",
+  },
+];
 ---
 
 <BaseLayout
-  title="Product — Neolect"
-  description="How Neolect works as the system of intelligence alongside your CRM."
+  title="Product — Neolect | Four pillars, one intelligence layer"
+  description="How Neolect works: one workspace, capture at the source, deterministic workflows and agents over typed evidence, with safety as a first-class pillar."
 >
-  <section class="prose">
-    <h1>Neolect, alongside your CRM</h1>
-    <p>Placeholder. Real product copy lands in the content spec.</p>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">The product</span>
+      <h1>
+        Four pillars that turn a record of the past into a
+        <span class="hl">read on what's next</span>.
+      </h1>
+      <p class="lead">
+        Neolect is one intelligence layer expressed through four pillars — a
+        shared workspace, integrations that capture at the source, a deliberate
+        split between mechanical and judgment work, and safety treated as a
+        first-class concern rather than a footnote. Each is shaped to your
+        organization by a forward-deployed team.
+      </p>
+      <div class="cta-group">
+        <a href="#workspace" class="btn btn-primary">
+          See the pillars <span class="arr" aria-hidden="true">↓</span>
+        </a>
+        <a href="/resources" class="btn btn-ghost">How we deploy it</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow teal">The shape of it</span>
+      <h2>Not features bolted on. One layer, four jobs.</h2>
+      <p>
+        These aren't four products. They're four facets of the same system: a
+        place to work, a way to see everything, a method for getting work done
+        reliably, and the guardrails that let you trust it. Below, what each
+        pillar is — and the value it's built to deliver.
+      </p>
+    </div>
+
+    {pillars.map((p, i) => (
+      <div class="pillar" id={p.id}>
+        <div class={`pillar-index ${i % 2 ? "teal" : ""}`}>{String(i + 1).padStart(2, "0")}</div>
+        <div class="pillar-body">
+          <p class="card-eyebrow" style="margin-top:0;">{p.sub}</p>
+          <h2>{p.title}</h2>
+          {p.body.map((para) => (
+            <p>{para}</p>
+          ))}
+          <ul class="value-list">
+            {p.value.map((v) => (
+              <li>
+                <strong>{v.head}</strong> {v.body}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section>
+    <div class="callout featured">
+      <span class="eyebrow teal">The team behind the pillars</span>
+      <h2 style="margin-bottom: var(--space-3);">
+        Configurable only becomes useful when someone shapes it.
+      </h2>
+      <p>
+        A flexible system is just a blank canvas until it's tuned to how you
+        actually sell. Neolect's forward-deployed engineers sit with revenue
+        leadership in the first weeks to learn your motion — what a champion
+        looks like in your segment, what shape of silence precedes a slip on
+        your team, where the right autonomy boundary sits for a renewal versus
+        a new pursuit.
+      </p>
+      <p style="margin-top: var(--space-3);">
+        They compose the views, connect the systems, tune what the layer pays
+        attention to, and stay engaged as your motion evolves. This is
+        partnership, not a hand-off.
+      </p>
+      <div class="cta-group">
+        <a href="/resources" class="btn btn-ghost">
+          Learn about the FDE model <span class="arr" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head prose">
+      <span class="eyebrow warm">How it's different</span>
+      <h2>Three things that set Neolect apart.</h2>
+    </div>
+    <div class="card-grid cols-3">
+      {differentiators.map((d, i) => (
+        <article class="card">
+          <div class="card-eyebrow">{d.label}</div>
+          <h3>{d.title}</h3>
+          <p>{d.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="callout featured" style="text-align:center;">
+      <p style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem); line-height: 1.2; letter-spacing: -0.02em; color: var(--color-fg); margin: 0;">
+        The CRM marks <em>where</em> every deal is. Neolect reads
+        <span class="hl"><em>what's happening</em></span> inside it — and puts
+        the next move in front of the person who has to act.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-banner">
+      <span class="eyebrow">See it on your data</span>
+      <h2>The fastest way to understand the pillars is to see them on a real deal.</h2>
+      <p class="lead">
+        We'll walk through your motion, show how each pillar maps to it, and
+        where the value lands first.
+      </p>
+      <div class="cta-group">
+        <a href="/contact" class="btn btn-primary">
+          Request a walkthrough <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a href="/" class="btn btn-ghost">Back to overview</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
+
+<style>
+  .value-list {
+    list-style: none;
+    margin: var(--space-3) 0 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+  .value-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--color-fg-soft);
+    font-size: 0.9375rem;
+  }
+  .value-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  .value-list li strong {
+    color: var(--color-fg);
+    font-weight: 600;
+  }
+</style>

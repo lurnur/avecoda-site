@@ -1,34 +1,152 @@
 ---
 const year = new Date().getFullYear();
+const productNav = [
+  { href: "/", label: "Overview" },
+  { href: "/product", label: "The four pillars" },
+  { href: "/product#workspace", label: "Workspace" },
+  { href: "/product#safety", label: "Safety & trust" },
+];
+const companyNav = [
+  { href: "/about", label: "About Avecoda" },
+  { href: "/resources", label: "Forward-deployed model" },
+  { href: "/contact", label: "Request a walkthrough" },
+];
+const resourcesNav = [
+  { href: "/resources#what", label: "What is an FDE?" },
+  { href: "/resources#how", label: "How we embed" },
+  { href: "/resources#deliver", label: "Discover, build, deliver" },
+];
 ---
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p class="contact">
-      Questions? <a href="mailto:prasanth@neupage.com">prasanth@neupage.com</a>
-    </p>
-    <p class="copyright">© {year} Avecoda. All rights reserved.</p>
+    <div class="footer-brand">
+      <a href="/" class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>Neolect
+      </a>
+      <p class="tagline">
+        The connected, intelligent workspace that makes your CRM finally
+        deliver.
+      </p>
+      <p class="company">A product of Avecoda.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Product">
+      <h4>Product</h4>
+      <ul>
+        {productNav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Company">
+      <h4>Company</h4>
+      <ul>
+        {companyNav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Resources">
+      <h4>Resources</h4>
+      <ul>
+        {resourcesNav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {year} Avecoda, Inc. — Neolect is a product of Avecoda.</p>
+    <p>The CRM stays the system of record.</p>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    border-top: 1px solid var(--color-border);
+    position: relative;
     margin-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-soft);
+  }
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-teal) 50%, var(--color-highlight) 100%);
   }
   .footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-3);
-    padding-block: var(--space-4);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-4);
+    padding-block: var(--space-5) var(--space-4);
   }
-  .footer-inner p {
+  @media (max-width: 720px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      padding-top: var(--space-4);
+    }
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--color-fg);
+    text-decoration: none;
+  }
+  .footer-brand .tagline {
+    margin: var(--space-3) 0 var(--space-1);
+    max-width: 28ch;
+    color: var(--color-fg-soft);
+  }
+  .footer-brand .company {
     margin: 0;
     color: var(--color-muted);
+    font-size: 0.875rem;
   }
-  .site-footer a {
+  h4 {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin: 0 0 var(--space-3);
+  }
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+  .footer-nav a,
+  .footer-contact a {
+    color: var(--color-fg-soft);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+  .footer-nav a:hover,
+  .footer-contact a:hover {
     color: var(--color-accent);
+  }
+  .footer-contact p {
+    margin: 0;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    padding-block: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+  .footer-bottom p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.8125rem;
   }
 </style>

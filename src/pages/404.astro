@@ -6,8 +6,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Page not found — Neolect"
   description="The page you were looking for doesn't exist."
 >
-  <section class="prose">
-    <h1>Page not found</h1>
-    <p>That page doesn't exist. <a href="/">Head back home</a>.</p>
+  <section class="hero" style="text-align: center;">
+    <div class="hero-inner" style="margin: 0 auto;">
+      <p class="error-display">404</p>
+      <span class="eyebrow" style="justify-content: center;">Page not found</span>
+      <h1>This deal slipped through the cracks.</h1>
+      <p class="lead">
+        The page you were looking for doesn't exist — or it's moved. Try one
+        of these instead.
+      </p>
+      <div class="cta-group" style="justify-content: center;">
+        <a href="/" class="btn btn-primary">
+          Head back home <span class="arr" aria-hidden="true">→</span>
+        </a>
+        <a href="/product" class="btn btn-ghost">See the product</a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
