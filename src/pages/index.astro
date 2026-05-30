@@ -4,34 +4,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const surfaces = [
   {
     title: "The CRM eats selling time",
-    body: "Reps spend only about 28% of their week actually selling; the rest goes to admin, internal meetings, and data entry. Closing the gap between making and missing the number is largely about returning that time.",
+    body: "Reps spend only about 28% of the week actually selling; the rest goes to admin, internal meetings, and data entry. Closing the gap between making and missing the number is largely about returning that time.",
   },
   {
     title: "Forecasts are hard to trust",
     body: "Only about 20% of organizations forecast within 5% of actuals, and 43% miss by more than 10%. A stage label times a rep's gut feel isn't grounded in anything the system can verify.",
   },
   {
-    title: "Capture is opt-in and inconsistent",
-    body: "Native auto-capture exists, but adoption is uneven and a meaningful share of customer interactions still never make it into the system in usable form. What isn't captured can't be reasoned over.",
-  },
-  {
     title: "Deals slip without warning",
     body: "A champion's replies slow from same-day to four days. A procurement contact appears and is never added. The record reflects none of it — until the close date passes and the deal is already gone.",
   },
   {
-    title: "Reporting still leans on a stretched power user",
-    body: "CRMs have added conversational and AI-assisted reporting, but the admins who own them are overloaded — 53% say too much is being demanded of them. Ad-hoc questions still queue behind that one person more often than leaders would like.",
-  },
-  {
     title: "AI on thin data has underdelivered",
-    body: "Buyers spent a year being sold AI inside the CRM and learned it's only as good as the sparse, rep-dependent data beneath it. The fix isn't more AI on the same data — it's solving the capture-and-reconciliation problem first, then letting AI work over evidence that's been assembled and cleaned.",
+    body: "Buyers spent a year being sold AI inside the CRM and learned it's only as good as the sparse, rep-dependent data beneath it. The fix isn't more AI on the same data — it's solving capture and reconciliation first, then letting AI work over evidence that's been assembled and cleaned.",
   },
 ];
 
 const pillars = [
   {
     label: "Pillar 01 — Workspace",
-    title: "One journey, multiples views",
+    title: "One journey, multiple views",
     body: "The rep's daily list, the manager's deal review, the CRO's forecast, the RevOps query surface, the CS handoff — the same underlying deal, multiple views structured for each role and cadence, so the truth stays coherent across the team.",
   },
   {
@@ -88,15 +80,13 @@ const roles = [
     <div class="hero-inner">
       <span class="eyebrow">The system of intelligence for revenue teams</span>
       <h1>
-        Your CRM Holds the Records. <span class="hl">Neolect Connects the Dots.</span>
+        Your CRM holds the records. <span class="hl">Neolect connects the dots.</span>
       </h1>
       <p class="lead">
-        Neolect is an intelligent workspace that runs alongside your CRM. It connects
-        to your sources - email, calls, and calendar and captures the deal state automatically,
-        enriches each interaction, and surfaces the signals that truly matter. Every deal
-        is reconciled into its full journey, with essentials up front and details a click
-        away. Neolect helps you make the right next move, forecast with confidence, and
-        close more deals, faster.
+        Neolect is an intelligent workspace that runs alongside your CRM. It
+        captures every deal interaction at the source, reconciles them into the
+        full journey, and surfaces the right next move — so your team
+        forecasts with confidence and closes more, faster.
       </p>
       <div class="cta-group">
         <a href="/contact" class="btn btn-primary">
@@ -110,164 +100,156 @@ const roles = [
   <section>
     <div class="section-head prose">
       <span class="eyebrow">What sets Neolect apart</span>
-      <h2>Not an AI bolt-on. A well designed workspace.</h2>
+      <h2>Engineered, Not AI Coded.</h2>
+      <p>
+        Teams are racing to build AI-generated code to tackle CRM 
+        gaps. Most AI tools rely on sparse, incomplete data. Neolect
+         is engineered as a deliberate, well-architected layer — built 
+         on years of engineering best practices, deep data experience, 
+         and extensive integration knowledge, with protective guardrails, 
+         sandboxing, and evals. The result: data that's complete, and AI 
+         that's trustworthy and governed.
+      </p>
     </div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
+
+    <div class="contrast-wrap">
+      <table class="contrast">
         <thead>
           <tr>
-            <th>Neolect is not just</th>
-            <th>Neolect is a</th>
-            <th>So that</th>
+            <th scope="col" class="col-not">What it's not</th>
+            <th scope="col" class="col-is">What it is</th>
+            <th scope="col" class="col-why">Why</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td data-label="Neolect is not just">an AI agent bolted onto the CRM,</td>
-            <td data-label="Neolect is a">well-architected intelligence layer with guardrails, access controls, and user permissions,</td>
-            <td data-label="so that">your CRM stays protected and customer data never leaks.</td>
+            <td data-label="Not just">Not a CRM connector that pipes data into the CRM.</td>
+            <td data-label="Neolect is a">Neolect is a configurable integration shaped to how your business actually works — reading the surrounding systems and surfacing the signals that matter,</td>
+            <td data-label="So that">so that your team stops hand-keying what the systems already know.</td>
           </tr>
           <tr>
-            <td data-label="Neolect is not just">a thin layer on top of the CRM,</td>
-            <td data-label="Neolect is a">working surface with permissions and user management built in,</td>
-            <td data-label="so that">only the right data is visible to the right person.</td>
+            <td data-label="Not just">Not an AI agent just bolted on top of your CRM.</td>
+            <td data-label="Neolect is a">Neolect is a well-architected intelligence built on disciplined engineering — predictable, traceable, and secure by design,</td>
+            <td data-label="So that">so that AI runs against live business data without becoming a risk you have to manage.</td>
           </tr>
           <tr>
-            <td data-label="Neolect is not just">a connector that pipes data into the CRM,</td>
-            <td data-label="Neolect is a">direct line to the source systems where the real deal data lives, pulling only what's relevant,</td>
-            <td data-label="so that">no one wastes time on manual data entry.</td>
+            <td data-label="Not just">Not a read-only layer sitting on top of your CRM.</td>
+            <td data-label="Neolect is a">Neolect is a governed workspace with access control, user management, and permissions enforced even on combined views,</td>
+            <td data-label="So that">so that sensitive data never leaks across roles, even when sources are joined.</td>
           </tr>
           <tr>
-            <td data-label="Neolect is not just">a dashboard slapped onto the CRM,</td>
-            <td data-label="Neolect is a">two-way workspace that gives every role the context for the job at hand,</td>
-            <td data-label="so that">records get updated in real time with accurate, accessible information.</td>
+            <td data-label="Not just">Not a dashboard you can only look at.</td>
+            <td data-label="Neolect is a">Neolect is a workspace where every role builds the view for the job in front of them,</td>
+            <td data-label="So that">so that your team spends its time closing deals, not chasing context.</td>
+          </tr>
+          <tr>
+            <td data-label="Not just">Not a static grid of fixed fields.</td>
+            <td data-label="Neolect is a">Neolect is a dynamic surface with formulas, aggregations, and relational views,</td>
+            <td data-label="So that">so that RevOps builds real forecast math and runs what-if scenarios without a data team.</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <style>
-      .compare-table-wrap {
-        width: 100%;
-        max-width: var(--container);
+      .contrast-wrap {
+        max-width: 1080px;
         margin-inline: auto;
         overflow-x: auto;
       }
-      .compare-table {
+      .contrast {
         width: 100%;
-        min-width: 720px;
+        min-width: 760px;
         border-collapse: collapse;
-        font-size: 0.95rem;
+        font-size: 0.9375rem;
+        line-height: 1.5;
       }
-      .compare-table thead tr {
-        border-bottom: 2px solid var(--color-accent-strong);
+      .contrast thead th {
         text-align: left;
-      }
-      .compare-table tbody tr {
-        border-bottom: 1px solid var(--color-border);
-      }
-      .compare-table tbody tr:last-child {
-        border-bottom: none;
-      }
-      .compare-table th,
-      .compare-table td {
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
         padding: var(--space-2) var(--space-3);
+        border-bottom: 2px solid var(--color-accent-strong);
+        vertical-align: bottom;
+      }
+      .contrast thead .col-not { color: var(--color-muted); width: 26%; }
+      .contrast thead .col-is { color: var(--color-accent-strong); width: 40%; }
+      .contrast thead .col-why { color: var(--color-warm); width: 34%; }
+
+      .contrast tbody tr {
+        border-bottom: 1px solid var(--color-border);
+        transition: background-color 120ms ease;
+      }
+      .contrast tbody tr:last-child { border-bottom: none; }
+      .contrast tbody tr:hover {
+        background: color-mix(in oklab, var(--color-accent-soft) 50%, transparent);
+      }
+      .contrast tbody td {
+        padding: var(--space-3);
         vertical-align: top;
       }
-      .compare-table th:first-child,
-      .compare-table td:first-child {
-        width: 28%;
+      .contrast tbody td:nth-child(1) {
+        color: var(--color-muted);
+        font-size: 0.9rem;
       }
-      .compare-table th:nth-child(2),
-      .compare-table td:nth-child(2) {
-        width: 36%;
+      .contrast tbody td:nth-child(2) {
+        font-weight: 600;
+        color: var(--color-text, inherit);
       }
-      .compare-table th:last-child,
-      .compare-table td:last-child {
-        width: 36%;
+      .contrast tbody td:nth-child(3) {
+        color: var(--color-muted);
+        font-style: italic;
+        font-size: 0.9rem;
       }
-      @media (max-width: 640px) {
-        .compare-table-wrap { overflow-x: visible; }
-        .compare-table { min-width: 0; }
-        .compare-table thead { display: none; }
-        .compare-table,
-        .compare-table tbody,
-        .compare-table tr,
-        .compare-table td { display: block; width: 100%; }
-        .compare-table tr {
+
+      @media (max-width: 760px) {
+        .contrast-wrap { overflow-x: visible; }
+        .contrast { min-width: 0; font-size: 1rem; }
+        .contrast thead { display: none; }
+        .contrast, .contrast tbody, .contrast tr, .contrast td {
+          display: block;
+          width: 100%;
+        }
+        .contrast tbody tr {
           padding: var(--space-3) 0;
           border-bottom: 1px solid var(--color-border);
         }
-        .compare-table td {
-          padding: var(--space-1) 0;
+        .contrast tbody tr:hover { background: transparent; }
+        .contrast tbody td {
+          padding: 0.35rem 0;
         }
-        .compare-table td::before {
+        .contrast tbody td::before {
           content: attr(data-label);
           display: block;
-          font-size: 0.75rem;
-          font-weight: 600;
-          letter-spacing: 0.04em;
+          font-size: 0.65rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: var(--color-accent-strong);
           margin-bottom: 0.25rem;
         }
+        .contrast tbody td:nth-child(1)::before { color: var(--color-muted); content: "Not just"; }
+        .contrast tbody td:nth-child(2)::before { color: var(--color-accent-strong); content: "Neolect is a"; }
+        .contrast tbody td:nth-child(3)::before { color: var(--color-warm); content: "So that"; }
       }
     </style>
   </section>
 
   <section>
     <div class="section-head prose">
-      <span class="eyebrow">The gap</span>
-      <h2>IIntelligence is only as good as the data it uses.</h2>
+      <span class="eyebrow warm">The gap</span>
+      <h2>Intelligence is only as good as the data it uses.</h2>
       <p>
-        The CRM marks where every deal stands, and it isn't going away. New features 
-        keep getting piled on — deal intelligence, AI reporting, lead scoring — but 
-        they all run on thin data: sparse, inconsistently entered, rarely complete 
-        enough to reason over. Layering intelligence on incomplete data isn't intelligent. 
-        Neolect fixes the foundation first — starting with your source of truth and making 
-        the data complete enough to act on.
+        The CRM isn't going away — it's where every deal lives. But every new
+        feature piled on top of it — deal intelligence, AI reporting, lead
+        scoring — runs on the same sparse, inconsistently entered data. Most
+        CRM pain traces back to one thing: the system only reasons over what
+        gets captured, and capture is opt-in. Neolect fixes the foundation
+        first.
       </p>
     </div>
-    <div class="compare">
-      <div class="compare-col before">
-        <h3>System of record · the CRM</h3>
-        <p class="card-eyebrow" style="margin-top:0;">Stores what was entered</p>
-        <ul>
-          <li>Depends on what a rep chooses to log, and logging is inconsistent in practice</li>
-          <li>Reacts to recorded events more than to what's actually moving in the deal</li>
-          <li>Relates records, but rarely reasons across them for patterns on its own</li>
-          <li>Reporting exists, but the data underneath is often too thin to trust</li>
-          <li>A blank field reads as empty, not as a risk signal</li>
-        </ul>
-      </div>
-      <div class="compare-col after">
-        <h3>System of intelligence · Neolect</h3>
-        <p class="card-eyebrow" style="margin-top:0; color:var(--color-accent-strong);">Understands what's happening</p>
-        <ul>
-          <li>Captures activity automatically, at the source, as it happens</li>
-          <li>Reads the early signals that tend to precede a slip</li>
-          <li>Weighs each deal against the pattern of prior ones</li>
-          <li>Answers questions in plain language, grounded in evidence that's been reconciled first</li>
-          <li>Treats a missing buyer or a quiet champion as evidence</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-head prose">
-      <span class="eyebrow warm">Why it matters</span>
-      <h2>One problem, showing up everywhere at once.</h2>
-      <p>
-        Most CRM pain traces back to one thing: the system only reasons over
-        what actually gets captured, and what gets captured is sparse and
-        inconsistent. Solve capture and reconcile the data first, and the
-        symptoms below ease in sequence. Setup and configuration burden is a
-        real, separate problem — we address it directly through the
-        forward-deployed team, below.
-      </p>
-    </div>
-    <div class="card-grid cols-3">
+    <div class="card-grid cols-2">
       {surfaces.map((s, i) => (
         <article class="card">
           <div class={`card-num ${i % 2 ? "teal" : ""}`}>{String(i + 1).padStart(2, "0")}</div>
@@ -278,9 +260,7 @@ const roles = [
     </div>
     <p class="prose" style="margin-top: var(--space-3); color: var(--color-muted); font-size: 0.8125rem; font-style: italic;">
       Selling-time figure from Salesforce State of Sales; forecast-accuracy
-      figures from Xactly's 2024 Sales Forecasting Benchmark Report; admin-load
-      figure from the SF Ben Salesforce Admin Survey 2025 (~1,000 admins, 47
-      countries).
+      figures from Xactly's 2024 Sales Forecasting Benchmark Report.
     </p>
   </section>
 
@@ -372,7 +352,7 @@ const roles = [
       <span class="eyebrow warm">By role</span>
       <h2>The same intelligence, a different day depending on the seat.</h2>
     </div>
-    <div class="card-grid cols-2">
+    <div class="card-grid cols-3">
       {roles.map((r, i) => (
         <article class="card">
           <div class="card-eyebrow">{r.seat}</div>

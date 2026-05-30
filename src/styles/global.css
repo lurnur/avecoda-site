@@ -721,16 +721,18 @@ section + section {
   margin: 0;
 }
 
-/* ---- Brand mark (small green square next to wordmark) ---- */
+/* ---- Brand mark (Neolect symbol next to wordmark) ---- */
 .brand-mark {
   display: inline-block;
-  width: 0.85rem;
-  height: 0.85rem;
-  border-radius: 4px;
-  background: var(--color-accent);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/apple-touch-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: 0.5rem;
-  vertical-align: -1px;
-  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  vertical-align: -0.35rem;
+  border-radius: 6px;
 }
 
 /* ---- Reduced-motion safety ---- */
