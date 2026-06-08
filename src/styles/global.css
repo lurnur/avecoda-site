@@ -312,11 +312,16 @@ section + section {
 }
 
 .hero-inner {
-  max-width: 56rem;
+  max-width: 72rem;
 }
 
 .hero h1 {
   margin-top: var(--space-3);
+}
+
+/* Let the body copy span the wider hero block. */
+.hero .lead {
+  max-width: 80ch;
 }
 
 /* ---- Buttons / CTA group ---- */
